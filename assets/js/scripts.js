@@ -1,5 +1,3 @@
-var serverUrl = 'https://sreenivasarajiv.herokuapp.com';
-
 var newq = [0, 0];
 
 $(document).ready(function () {
@@ -62,11 +60,9 @@ function SendMail() {
         message: $('#message').val()
     }
 
-    $.ajax(serverUrl + '/send-mail', {
+    $.ajax('/send-mail', {
         data: JSON.stringify(data),
         contentType: 'application/json',
-        crossDomain: true,
-        dataType : "string",
         type: 'POST',
         success: function (data) {
             $('#modalCloseButton').click();
@@ -75,7 +71,7 @@ function SendMail() {
                 return true;
             }
         },
-        error: function(response){
+        error: function(){
             swal("Error", "Something went wrong on Server side", "error");
         }
     });
