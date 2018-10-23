@@ -1,0 +1,72 @@
+.highlight {
+    /* border: 2px solid red; */
+    position: fixed;
+}
+
+body, .base{
+    padding : 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: black;
+}
+
+.info{
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    top : 50%;
+    margin-top: -250px;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 400px; /* Need a specific value to work */
+    min-width: 400px; /* Need a specific value to work */
+    /* background-color: rgba(255, 255, 255, 0.6); */
+    background-color: white;
+    box-shadow: 3px 3px 5px black;
+    text-align: center;
+}
+
+.box{
+    background: red;
+}
+
+/* .btn{
+    box-shadow: 2px 2px 2px black;
+} */
+
+.highlight strong {
+    /* text-shadow: 2px 2px 2px black; */
+}
+
+.content {
+    padding : 0px;
+    margin : 0px;
+    min-width: 768px;
+    width : 100%;
+}
+
+/************* modal center ***********/
+
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+    pointer-events:none; /* This makes sure that we can still click outside of the modal to close it */
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events:none;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+    pointer-events: all;
+}
