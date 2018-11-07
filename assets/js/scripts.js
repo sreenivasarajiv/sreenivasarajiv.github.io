@@ -1,3 +1,5 @@
+var baseUrl = 'https://sreenivasarajiv.herokuapp.com';
+
 var newq = [0, 0];
 
 $(document).ready(function () {
@@ -60,7 +62,7 @@ function SendMail() {
         message: $('#message').val()
     }
 
-    $.ajax('/send-mail', {
+    $.ajax(baseUrl + '/send-mail', {
         data: JSON.stringify(data),
         contentType: 'application/json',
         type: 'POST',
@@ -70,9 +72,6 @@ function SendMail() {
                 swal("Success", "Your Feedback have been sent", "success");
                 return true;
             }
-        },
-        error: function(){
-            swal("Error", "Something went wrong on Server side", "error");
         }
     });
 
